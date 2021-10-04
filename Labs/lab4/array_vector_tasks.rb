@@ -52,4 +52,9 @@ def task6(arr)
   end
   [sum1, sum2]
 end
+
+def task7(arr1, arr2)
+  task3(arr1, arr2)
+end
+
 p task6([1,0,-5,2,0,3,-4,4])
