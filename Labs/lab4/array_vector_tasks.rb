@@ -70,4 +70,12 @@ def task8(arr)
   end
   res
 end
-p task8([1,1,1,4,3,2,2,3,3,5,6,2])
+
+def task9(arr)
+  res = []
+  arr.each_index { |i| res << i if arr[i].zero? }
+  arr.each_index { |i| res << i if arr[i].negative? }
+  arr.each_index { |i| res << i if arr[i].positive? }
+  res
+end
+p task9([0,1,0,1,-1,4,3,2,-2,3,3,5,-6,2])
