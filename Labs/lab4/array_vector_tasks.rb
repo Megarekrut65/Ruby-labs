@@ -57,4 +57,17 @@ def task7(arr1, arr2)
   task3(arr1, arr2)
 end
 
-p task6([1,0,-5,2,0,3,-4,4])
+def task8(arr)
+  count = Array.new(arr.max + 1) { 0 }
+  arr.each { |item| count[item] += 1 }
+  res = []
+  arr.each do |item|
+    res << if count[item] > 1
+             count[item]
+           else
+             item
+           end
+  end
+  res
+end
+p task8([1,1,1,4,3,2,2,3,3,5,6,2])
