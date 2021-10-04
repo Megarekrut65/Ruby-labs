@@ -1,16 +1,11 @@
+# frozen_string_literal: true
 def task1(arr)
-  size = arr.max + 1
-  res = Array.new(size) { 0 }
+  res = Array.new(arr.max + 1) { 0 }
   arr.each { |item| res[item] += 1 }
   same = []
-  arr.each do |item|
-    same << item if res[item] > 1
-  end
+  arr.each { |item| same << item if res[item] > 1 }
   matrix = []
-  same = same.uniq
-  same.each do |item|
-    matrix << Array.new(res[item]){ item }
-  end
+  same.uniq.each { |item| matrix << Array.new(res[item]) { item } }
   matrix
 end
 
