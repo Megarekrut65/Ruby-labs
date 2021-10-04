@@ -9,4 +9,16 @@ def task1(arr)
   matrix
 end
 
-p task1([1, 1, 1, 1, 1, 2, 3, 4, 4, 5,2,6,8,9,6,8,6,3])
+def task2(arr)
+  sum_value = 0
+  sum_index = 0
+  arr.each_index do |i|
+    if arr[i].to_i.even?
+      sum_value += arr[i].to_i
+      sum_index += i
+    end
+  end
+  [sum_value, sum_index]
+end
+
+p task2([13.5, 5.1, 10.4, 4.1, 43.2])
