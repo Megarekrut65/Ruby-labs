@@ -24,4 +24,8 @@ end
 def task3(arr1, arr2)
   arr1 & arr2
 end
-p task3([1,2,3],[3,4,5])
+
+def task4(arr)
+  arr.unshift(arr.pop)
+end
+p task4([1,2,3,4])
