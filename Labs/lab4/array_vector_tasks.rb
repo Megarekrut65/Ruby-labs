@@ -78,4 +78,9 @@ def task9(arr)
   arr.each_index { |i| res << i if arr[i].positive? }
   res
 end
-p task9([0,1,0,1,-1,4,3,2,-2,3,3,5,-6,2])
+
+def task10(arr1, arr2)
+  arr2.reject(&:odd?) + arr2.reject(&:even?) +
+    arr1.reject(&:even?) + arr1.reject(&:odd?)
+end
+p task10([1,2,3,4,5],[-1,-2,-3,-4,-5])
