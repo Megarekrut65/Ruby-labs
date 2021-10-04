@@ -21,4 +21,7 @@ def task2(arr)
   [sum_value, sum_index]
 end
 
-p task2([13.5, 5.1, 10.4, 4.1, 43.2])
+def task3(arr1, arr2)
+  arr1 & arr2
+end
+p task3([1,2,3],[3,4,5])
