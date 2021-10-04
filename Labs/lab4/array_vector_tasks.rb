@@ -83,4 +83,10 @@ def task10(arr1, arr2)
   arr2.reject(&:odd?) + arr2.reject(&:even?) +
     arr1.reject(&:even?) + arr1.reject(&:odd?)
 end
-p task10([1,2,3,4,5],[-1,-2,-3,-4,-5])
+
+def task11(arr)
+  part1 = arr.slice(0, arr.size / 2)
+  part2 = arr.slice(arr.size / 2, arr.size)
+  part1.reverse + part2.reverse
+end
+p task11([1,2,3,4,5,6,7,8,9,10])
