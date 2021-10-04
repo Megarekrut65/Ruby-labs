@@ -28,4 +28,28 @@ end
 def task4(arr)
   arr.unshift(arr.pop)
 end
-p task4([1,2,3,4])
+
+def task5(arr)
+  res = arr.reject(&:nonzero?)
+  arr -= res
+  res += arr.reject(&:positive?)
+  arr -= res
+  res + arr
+end
+
+def task6(arr)
+  sum1 = arr.inject(0) do |sum, item|
+    if item.even? && item.negative?
+      sum + item
+    else sum
+    end
+  end
+  sum2 = arr.inject(0) do |sum, item|
+    if item.odd? && item.positive?
+      sum + item
+    else sum
+    end
+  end
+  [sum1, sum2]
+end
+p task6([1,0,-5,2,0,3,-4,4])
