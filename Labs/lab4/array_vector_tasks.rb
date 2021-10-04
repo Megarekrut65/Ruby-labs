@@ -89,4 +89,13 @@ def task11(arr)
   part2 = arr.slice(arr.size / 2, arr.size)
   part1.reverse + part2.reverse
 end
-p task11([1,2,3,4,5,6,7,8,9,10])
+
+def task12(arr1, arr2)
+  res = []
+  if arr1.size == arr2.size
+    arr1.each_index { |i| res << (arr1[i].to_i + arr2[i].to_i) if arr1[i].to_i.even? }
+    arr1.each_index { |i| res << (arr1[i].to_i + arr2[i].to_i) if arr1[i].to_i.odd? }
+  end
+  res
+end
+p task12([1,2,3,4,5,6,7,8,9,10],[2,1,4,3,6,5,8,7,10,9])
