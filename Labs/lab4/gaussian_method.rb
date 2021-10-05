@@ -71,10 +71,10 @@ def gaussian(matrix, b)
 end
 
 matrix = [
-  [1,2,5],
-  [4,7,1],
-  [9,1,2]
+  [1, 2, 5],
+  [4, 17, 1],
+  [29, 1, 2]
 ]
-x = [1,2,3]
+x = [1, 2, 3]
 b = matrix_multiply_vector(matrix, x)
 p gaussian(matrix, b)
